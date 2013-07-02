@@ -128,7 +128,7 @@
         </Setter>
     </Style>
 
-    <!-- style for default button -->    
+    <!-- style for default button -->
   <Style TargetType="{x:Type Button}" x:Key="MetroButton">
         <Setter Property="MinHeight" Value="25" />
         <Setter Property="FontWeight" Value="Bold" />
