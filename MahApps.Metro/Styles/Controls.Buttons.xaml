@@ -174,9 +174,11 @@
                             <VisualStateGroup x:Name="FocusStates">
                                 <VisualState x:Name="Focused">
                                     <Storyboard>
+                                        <!--
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="FocusRectangle">
                                             <EasingDoubleKeyFrame KeyTime="0" Value="1" />
                                         </DoubleAnimationUsingKeyFrames>
+                                        -->
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="FocusInnerRectangle">
                                             <EasingDoubleKeyFrame KeyTime="0" Value="1" />
                                         </DoubleAnimationUsingKeyFrames>
@@ -206,18 +208,18 @@
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 CornerRadius="3.5"
                                 Opacity="0" />
-                        <Rectangle x:Name="FocusRectangle"
+                        <Rectangle x:Name="FocusRectangle" SnapsToDevicePixels="True"
                                    Stroke="{DynamicResource TextBoxMouseOverInnerBorderBrush}"
                                    RadiusY="4"
                                    RadiusX="4"
                                    Margin="-1"
                                    Opacity="0" />
-                        <Rectangle x:Name="FocusInnerRectangle"
+                        <Rectangle x:Name="FocusInnerRectangle" SnapsToDevicePixels="True"
                                    StrokeThickness="{TemplateBinding BorderThickness}"
                                    Stroke="{DynamicResource TextBoxMouseOverBorderBrush}"
                                    RadiusX="3"
                                    RadiusY="3"
-                                   Opacity="0" />
+                                   Opacity="0" />                      
                         <ContentPresenter x:Name="contentPresenter"
                                           RecognizesAccessKey="True"
                                           ContentTemplate="{TemplateBinding ContentTemplate}"
