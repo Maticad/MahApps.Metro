@@ -28,7 +28,8 @@ namespace MahApps.Metro.Controls
         void MetroTabItem_Unloaded(object sender, RoutedEventArgs e)
         {
             this.Unloaded -= MetroTabItem_Unloaded;
-            closeButton.Click -= closeButton_Click;
+            if (closeButton != null)
+                closeButton.Click -= closeButton_Click;
 
             closeButtonClickUnloaded = true;
         }
@@ -75,6 +76,25 @@ namespace MahApps.Metro.Controls
                     item.closeButton.UpdateLayout();
 
                 })));
+
+        public FontStretch HeaderFontStretch
+        {
+            get { return (FontStretch)GetValue(HeaderFontStretchProperty); }
+            set { SetValue(HeaderFontStretchProperty, value); }
+        }
+
+        public static readonly DependencyProperty HeaderFontStretchProperty =
+            DependencyProperty.Register("HeaderFontStretch", typeof(FontStretch), typeof(MetroTabItem), new PropertyMetadata(FontStretches.Normal));
+
+
+        public FontWeight HeaderFontWeight
+        {
+            get { return (FontWeight)GetValue(HeaderFontWeightProperty); }
+            set { SetValue(HeaderFontWeightProperty, value); }
+        }
+
+        public static readonly DependencyProperty HeaderFontWeightProperty =
+            DependencyProperty.Register("HeaderFontWeight", typeof(FontWeight), typeof(MetroTabItem), new PropertyMetadata(FontWeights.Normal));
 
         public bool CloseButtonEnabled
         {
