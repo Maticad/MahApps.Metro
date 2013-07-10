@@ -188,40 +188,44 @@
                                 <VisualState x:Name="Unfocused" />
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
+                        <!-- Maticad: eliminato radius  -->
                         <Border x:Name="Background"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 Background="{TemplateBinding Background}"
-                                CornerRadius="3" />
+                                CornerRadius="0" />
+                        <!-- Maticad: eliminato radius  -->
                         <Rectangle x:Name="DisabledVisualElement"
                                    Fill="{DynamicResource ControlsDisabledBrush}"
                                    IsHitTestVisible="false"
                                    Opacity="0"
-                                   RadiusY="3"
-                                   RadiusX="3" />
+                                   RadiusY="0"
+                                   RadiusX="0" />
+                        <!-- Maticad: eliminato radius  -->
                         <Border x:Name="MouseOverBorder"
                                 Background="{DynamicResource GrayBrush8}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="3.5"
+                                CornerRadius="0"
                                 Opacity="0" />
+                        <!-- Maticad: eliminato radius  -->
                         <Border x:Name="PressedBorder"
                                 Background="{DynamicResource GrayBrush5}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="3.5"
+                                CornerRadius="0"
                                 Opacity="0" />
-                        <!-- Maticad: Aggiunto SnapsToDevicePixels -->
-                        <Rectangle x:Name="FocusRectangle" SnapsToDevicePixels="True"
+                        <!-- Maticad: eliminato radius, margin  -->
+                        <Rectangle x:Name="FocusRectangle"
                                    Stroke="{DynamicResource TextBoxMouseOverInnerBorderBrush}"
-                                   RadiusY="4"
-                                   RadiusX="4"
-                                   Margin="-1"
+                                   RadiusY="0"
+                                   RadiusX="0"
+                                   Margin="0"
                                    Opacity="0" />
-                        <!-- Maticad: Aggiunto SnapsToDevicePixels -->
+                        <!-- Maticad: eliminato radius  -->
                         <Rectangle x:Name="FocusInnerRectangle" SnapsToDevicePixels="True"
                                    StrokeThickness="{TemplateBinding BorderThickness}"
                                    Stroke="{DynamicResource TextBoxMouseOverBorderBrush}"
-                                   RadiusX="3"
-                                   RadiusY="3"
+                                   RadiusX="0"
+                                   RadiusY="0"
                                    Opacity="0" />                      
                         <ContentPresenter x:Name="contentPresenter"
                                           RecognizesAccessKey="True"
@@ -397,15 +401,24 @@
                                 <VisualState x:Name="Unfocused"/>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
-                        <Border x:Name="Background" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="3"/>
-                        <Rectangle x:Name="DisabledVisualElement" Fill="{DynamicResource WhiteColorBrush}" IsHitTestVisible="false" Opacity="0" RadiusY="3" RadiusX="3"/>
-                        <Border x:Name="MouseOverBorder" Background="{DynamicResource GrayBrush8}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="3.5" Opacity="0"/>
-                        <Border x:Name="PressedBorder"  Background="{DynamicResource GrayBrush5}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="3.5" Opacity="0"/>
-                        <Border x:Name="CheckedBorder"  Background="{DynamicResource GrayBrush5}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="3.5" Opacity="0"/>
-                        <Rectangle x:Name="FocusRectangle" Stroke="{DynamicResource TextBoxMouseOverInnerBorderBrush}" RadiusY="4" RadiusX="4" Margin="-1" Opacity="0" />
-                        <Rectangle x:Name="FocusInnerRectangle" StrokeThickness="{TemplateBinding BorderThickness}" Stroke="{DynamicResource TextBoxMouseOverBorderBrush}" RadiusX="3" RadiusY="3" Opacity="0" />
-                        <Rectangle x:Name="CheckedRectangle" Stroke="{DynamicResource GrayBrush1}" RadiusY="4" RadiusX="4" Margin="-1" Opacity="0" />
-                        <Rectangle x:Name="CheckedInnerRectangle" Fill="{DynamicResource GrayBrush2}" StrokeThickness="{TemplateBinding BorderThickness}" Stroke="{DynamicResource GrayBrush2}" RadiusX="3" RadiusY="3" Opacity="0" />
+                        <!-- Maticad: eliminato radius  -->
+                        <Border x:Name="Background" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="0"/>
+                        <!-- Maticad: eliminato radius  -->
+                        <Rectangle x:Name="DisabledVisualElement" Fill="{DynamicResource WhiteColorBrush}" IsHitTestVisible="false" Opacity="0" RadiusY="0" RadiusX="0"/>
+                        <!-- Maticad: eliminato radius  -->
+                        <Border x:Name="MouseOverBorder" Background="{DynamicResource GrayBrush8}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="0" Opacity="0"/>
+                        <!-- Maticad: eliminato radius  -->
+                        <Border x:Name="PressedBorder"  Background="{DynamicResource GrayBrush5}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="0" Opacity="0"/>
+                        <!-- Maticad: eliminato radius  -->
+                        <Border x:Name="CheckedBorder"  Background="{DynamicResource GrayBrush5}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="0" Opacity="0"/>
+                        <!-- Maticad: eliminato radius, margin  -->
+                        <Rectangle x:Name="FocusRectangle" Stroke="{DynamicResource TextBoxMouseOverInnerBorderBrush}" RadiusY="0" RadiusX="0" Margin="0" Opacity="0" />
+                        <!-- Maticad: eliminato radius  -->
+                        <Rectangle x:Name="FocusInnerRectangle" StrokeThickness="{TemplateBinding BorderThickness}" Stroke="{DynamicResource TextBoxMouseOverBorderBrush}" RadiusX="0" RadiusY="0" Opacity="0" />
+                        <!-- Maticad: eliminato radius, margin  -->
+                        <Rectangle x:Name="CheckedRectangle" Stroke="{DynamicResource GrayBrush1}" RadiusY="0" RadiusX="0" Margin="0" Opacity="0" />
+                        <!-- Maticad: eliminato radius  -->
+                        <Rectangle x:Name="CheckedInnerRectangle" Fill="{DynamicResource GrayBrush2}" StrokeThickness="{TemplateBinding BorderThickness}" Stroke="{DynamicResource GrayBrush2}" RadiusX="0" RadiusY="0" Opacity="0" />
                         <ContentPresenter x:Name="contentPresenter" RecognizesAccessKey="True" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                     </Grid>
                 </ControlTemplate>
